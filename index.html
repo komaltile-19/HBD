@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Archu!💕🧿🎉</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(5deg); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100%) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.15); }
+    }
+    /* Rose background for lifafa modal */
+.rose-bg {
+  background: linear-gradient(135deg, #fff1f5, #ffe4ec, #fff);
+  overflow: hidden;
+}
+
+/* Rose petals */
+.rose-petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #ff9dbb, #ff4f8b);
+  border-radius: 60% 40% 60% 40%;
+  opacity: 0.8;
+  animation: petal-fall 6s linear infinite;
+}
+
+/* Petal animation */
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+    .float-animation {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .pulse-animation {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .bounce-animation {
+      animation: bounce 1.5s ease-in-out infinite;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .heartbeat-animation {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      animation: confetti-fall 3s linear infinite;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1s; }
+
+    .photo-frame {
+      border: 6px solid;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-frame:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .gift-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gift-card:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .quote-card {
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .quote-card:hover {
+      transform: scale(1.02);
+    }
+
+    .balloon {
+      position: fixed;
+      font-size: 3rem;
+      animation: float 5s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .game-card {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app" class="w-full h-full overflow-auto relative"><!-- Confetti -->
+   <div id="confetti-container" class="fixed inset-0 pointer-events-none z-50"></div><!-- Floating Balloons -->
+   <div class="balloon" style="top: 5%; left: 5%;">
+    🎈
+   </div>
+   <div class="balloon delay-1" style="top: 15%; right: 8%;">
+    🎉
+   </div>
+   <div class="balloon delay-2" style="top: 25%; left: 12%;">
+    🎊
+   </div>
+   <div class="balloon delay-3" style="top: 35%; right: 15%;">
+    ✨
+   </div>
+   <div class="balloon delay-4" style="bottom: 20%; left: 8%;">
+    🎁
+   </div>
+   <div class="balloon delay-5" style="bottom: 10%; right: 10%;">
+    💝
+   </div><!-- Main Content -->
+   <main class="min-h-full py-16 px-4 relative z-10"><!-- Hero Section -->
+    <section class="text-center mb-20 fade-in-up">
+     <div class="text-8xl mb-6 bounce-animation">
+      🎂
+     </div>
+     <h1 id="main-title" class="text-7xl md:text-8xl font-bold mb-4">Happy Birthday Archu! 🎉</h1>
+     <p id="subtitle" class="text-3xl mb-8">From Your Best Friend,of course it's me komu 💕</p>
+     <div class="max-w-3xl mx-auto rounded-3xl p-8 shadow-2xl">
+      <p id="opening-message" class="text-2xl leading-relaxed">Today is YOUR special day! Get ready for surprises, fun games, and lots of love! 🌟</p>
+     </div>
+    </section><!-- Photo Gallery Section -->
+    <!-- Photo Gallery Section -->
+<section class="max-w-7xl mx-auto mb-20 fade-in-up delay-1">
+  <h2 id="memory-title" class="text-5xl font-bold text-center mb-12">
+    Our Beautiful Journey 📸✨
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+
+    <!-- Photo 1 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo1.jpeg"
+           alt="Archu Photo 1"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+    <!-- Photo 2 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo2.jpeg"
+           alt="Archu Photo 2"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+    <!-- Photo 3 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo3.jpeg"
+           alt="Archu Photo 3"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+    <!-- Photo 4 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo4.jpeg"
+           alt="Archu Photo 4"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+    <!-- Photo 5 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo5.jpeg"
+           alt="Archu Photo 5"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+    <!-- Photo 6 -->
+    <div class="photo-frame rounded-xl overflow-hidden">
+      <img src="photo6.jpeg"
+           alt="Archu Photo 6"
+           class="w-full h-full object-cover aspect-square">
+    </div>
+
+  </div>
+
+  <p class="text-center text-lg italic">
+    💕 Our real memories, forever special 💕
+  </p>
+</section>
+
+        </div>
+        <p class="text-xl font-semibold text-center">Making Memories</p>
+       </div>
+      </div>
+     </div>
+     <p class="text-center text-lg italic">Keep smiling</p>
+    </section><!-- Inspirational Quotes Section -->
+    <section class="max-w-6xl mx-auto mb-20 fade-in-up delay-2">
+     <h2 class="text-5xl font-bold text-center mb-12">So there is no word in my mind right now but those thought for you 💭✨</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="quote-card rounded-2xl p-8 shadow-xl">
+       <div class="text-5xl mb-4 text-center">
+        🌸
+       </div>
+       <p id="quote-1" class="text-xl italic text-center leading-relaxed">"A friend like you is a rare gem that makes life beautiful every single day."</p>
+      </div>
+      <div class="quote-card rounded-2xl p-8 shadow-xl">
+       <div class="text-5xl mb-4 text-center">
+        ⭐
+       </div>
+       <p id="quote-2" class="text-xl italic text-center leading-relaxed">"May this year bring you endless joy, success, and all the happiness you deserve!"</p>
+      </div>
+      <div class="quote-card rounded-2xl p-8 shadow-xl">
+       <div class="text-5xl mb-4 text-center">
+        💫
+       </div>
+       <p id="quote-3" class="text-xl italic text-center leading-relaxed">"You light up every room you enter. Never stop shining bright, Archu!"</p>
+      </div>
+     </div>
+    </section><!-- Birthday Cake -->
+    <section class="text-center mb-20 fade-in-up delay-3">
+     <h2 class="text-5xl font-bold mb-8">Make A Wish! 🎂</h2>
+     <div class="inline-block pulse-animation">
+      <svg class="w-80 h-80 mx-auto" viewbox="0 0 200 200"><!-- Candle flames --> <ellipse cx="60" cy="25" rx="5" ry="8" fill="#fbbf24" opacity="0.9" /> <ellipse cx="100" cy="25" rx="5" ry="8" fill="#fbbf24" opacity="0.9" /> <ellipse cx="140" cy="25" rx="5" ry="8" fill="#fbbf24" opacity="0.9" /> <!-- Candles --> <rect x="57" y="25" width="6" height="25" fill="#ff1493" rx="1" /> <rect x="97" y="25" width="6" height="25" fill="#9333ea" rx="1" /> <rect x="137" y="25" width="6" height="25" fill="#fbbf24" rx="1" /> <!-- Top tier --> <rect x="45" y="50" width="110" height="35" fill="#ff1493" rx="5" /> <ellipse cx="100" cy="50" rx="55" ry="12" fill="#ff69b4" /> <!-- Frosting swirls --> <circle cx="60" cy="67" r="6" fill="#ffffff" /> <circle cx="80" cy="67" r="6" fill="#ffffff" /> <circle cx="100" cy="67" r="6" fill="#ffffff" /> <circle cx="120" cy="67" r="6" fill="#ffffff" /> <circle cx="140" cy="67" r="6" fill="#ffffff" /> <!-- Hearts decoration --> <text x="55" y="75" font-size="12" fill="#ff1493">
+        ❤️
+       </text> <text x="110" y="75" font-size="12" fill="#ff1493">
+        ❤️
+       </text> <!-- Middle tier --> <rect x="35" y="85" width="130" height="40" fill="#9333ea" rx="5" /> <ellipse cx="100" cy="85" rx="65" ry="14" fill="#a855f7" /> <!-- Star decorations --> <text x="45" y="108" font-size="14" fill="#ffd700">
+        ⭐
+       </text> <text x="95" y="108" font-size="14" fill="#ffd700">
+        ⭐
+       </text> <text x="140" y="108" font-size="14" fill="#ffd700">
+        ⭐
+       </text> <!-- Bottom tier --> <rect x="25" y="125" width="150" height="45" fill="#fbbf24" rx="5" /> <ellipse cx="100" cy="125" rx="75" ry="16" fill="#fde047" /> <!-- Decorative elements --> <circle cx="45" cy="147" r="7" fill="#ff1493" /> <circle cx="70" cy="147" r="7" fill="#9333ea" /> <circle cx="95" cy="147" r="7" fill="#ff1493" /> <circle cx="120" cy="147" r="7" fill="#9333ea" /> <circle cx="145" cy="147" r="7" fill="#ff1493" /> <!-- Base plate --> <ellipse cx="100" cy="170" rx="85" ry="8" fill="#d1d5db" />
+      </svg>
+     </div>
+     <p class="text-2xl mt-6 font-semibold">Blow the candles and make your wish come true! 🌟</p>
+    </section><!-- Games Section -->
+    <section class="max-w-6xl mx-auto mb-20 fade-in-up delay-4">
+     <h2 id="game-title" class="text-5xl font-bold text-center mb-12">Let's Play Games! 🎮🎲</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8"><!-- Balloon Pop Game -->
+      <div class="game-card rounded-2xl p-8 shadow-xl">
+       <h3 class="text-3xl font-bold mb-4 text-center">🎈 Balloon Pop Game</h3>
+       <p class="text-center mb-6 text-lg">Click the balloons to pop them!</p>
+       <div id="balloon-game" class="grid grid-cols-4 gap-4 mb-4 min-h-[200px]"><!-- Balloons will be generated here -->
+       </div>
+       <div class="text-center">
+        <p class="text-2xl font-bold mb-4">Score: <span id="balloon-score">0</span></p><button id="reset-balloon" class="px-6 py-3 rounded-full font-semibold text-lg transition-all hover:scale-105"> Reset Game </button>
+       </div>
+      </div><!-- Spin the Wheel -->
+      <div class="game-card rounded-2xl p-8 shadow-xl">
+       <h3 class="text-3xl font-bold mb-4 text-center">🎡 Spin the Wheel</h3>
+       <p class="text-center mb-6 text-lg">Spin to reveal your special message!</p>
+       <div class="flex justify-center mb-6">
+        <div id="wheel" class="w-48 h-48 rounded-full flex items-center justify-center text-6xl cursor-pointer transition-all hover:scale-105" style="background: conic-gradient(from 0deg, #ff1493 0deg 90deg, #9333ea 90deg 180deg, #fbbf24 180deg 270deg, #10b981 270deg 360deg);">
+         🎯
+        </div>
+       </div>
+       <div class="text-center"><button id="spin-wheel" class="px-6 py-3 rounded-full font-semibold text-lg transition-all hover:scale-105 mb-4"> Spin Now! </button>
+        <p id="wheel-result" class="text-xl font-semibold min-h-[60px]"></p>
+       </div>
+      </div><!-- Memory Match Game -->
+      <div class="game-card rounded-2xl p-8 shadow-xl">
+       <h3 class="text-3xl font-bold mb-4 text-center">🧠 Memory Match</h3>
+       <p class="text-center mb-6 text-lg">Find matching pairs!</p>
+       <div id="memory-game" class="grid grid-cols-4 gap-3 mb-4"><!-- Cards will be generated here -->
+       </div>
+       <div class="text-center">
+        <p class="text-2xl font-bold mb-4">Matches: <span id="memory-score">0</span>/8</p><button id="reset-memory" class="px-6 py-3 rounded-full font-semibold text-lg transition-all hover:scale-105"> New Game </button>
+       </div>
+      </div><!-- Birthday Quiz -->
+      <div class="game-card rounded-2xl p-8 shadow-xl">
+       <h3 class="text-3xl font-bold mb-4 text-center">📝 Birthday Trivia</h3>
+       <p class="text-center mb-6 text-lg">Test your birthday knowledge!</p>
+       <div id="quiz-container" class="mb-6">
+        <p id="quiz-question" class="text-xl mb-4 font-semibold text-center">What comes after "Happy Birthday to..."</p>
+        <div class="grid grid-cols-1 gap-3"><button class="quiz-option px-4 py-3 rounded-lg font-semibold transition-all hover:scale-105" data-answer="correct">You! 🎉</button> <button class="quiz-option px-4 py-3 rounded-lg font-semibold transition-all hover:scale-105" data-answer="wrong">Me! 🤔</button> <button class="quiz-option px-4 py-3 rounded-lg font-semibold transition-all hover:scale-105" data-answer="wrong">Them! 😄</button>
+        </div>
+       </div>
+       <p id="quiz-result" class="text-xl text-center font-bold min-h-[30px]"></p>
+      </div>
+     </div>
+    </section><!-- Gifts Section with Clickable Lifafa -->
+    <section class="max-w-6xl mx-auto mb-20 fade-in-up delay-5">
+     <h2 id="gift-title" class="text-5xl font-bold text-center mb-6">Special Gifts For You 🎁💝</h2>
+     <p class="text-center text-2xl mb-12">✨ Click on each lifafa to open and read your special message! ✨</p>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(0)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#ff1493" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#ff69b4" /> <polygon points="50,20 10,30 50,40" fill="#ff1493" /> <polygon points="50,20 90,30 50,40" fill="#ff1493" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         💖
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Endless Love</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(1)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#9333ea" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#a855f7" /> <polygon points="50,20 10,30 50,40" fill="#9333ea" /> <polygon points="50,20 90,30 50,40" fill="#9333ea" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         😊
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Infinite Joy</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(2)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#fbbf24" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#fde047" /> <polygon points="50,20 10,30 50,40" fill="#fbbf24" /> <polygon points="50,20 90,30 50,40" fill="#fbbf24" /> <circle cx="50" cy="55" r="8" fill="#ff1493" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         ⭐
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Bright Future</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(3)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#10b981" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#34d399" /> <polygon points="50,20 10,30 50,40" fill="#10b981" /> <polygon points="50,20 90,30 50,40" fill="#10b981" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         🌟
+        </text>
+       </svg>
+       <p class="font-bold text-xl">All Dreams</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(4)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#ec4899" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#f472b6" /> <polygon points="50,20 10,30 50,40" fill="#ec4899" /> <polygon points="50,20 90,30 50,40" fill="#ec4899" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         💝
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Best Wishes</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(5)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#6366f1" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#818cf8" /> <polygon points="50,20 10,30 50,40" fill="#6366f1" /> <polygon points="50,20 90,30 50,40" fill="#6366f1" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         🎊
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Peace &amp; Health</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(6)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#f97316" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#fb923c" /> <polygon points="50,20 10,30 50,40" fill="#f97316" /> <polygon points="50,20 90,30 50,40" fill="#f97316" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         ✨
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Success Always</p>
+      </div>
+      <div class="gift-card text-center p-6 rounded-2xl shadow-xl" onclick="openGift(7)">
+       <svg class="w-32 h-32 mx-auto mb-4 pointer-events-none" viewbox="0 0 100 100"><rect x="10" y="30" width="80" height="50" fill="#8b5cf6" rx="3" /> <polygon points="50,20 10,30 10,50 50,40 90,50 90,30" fill="#a78bfa" /> <polygon points="50,20 10,30 50,40" fill="#8b5cf6" /> <polygon points="50,20 90,30 50,40" fill="#8b5cf6" /> <circle cx="50" cy="55" r="8" fill="#ffd700" /> <text x="50" y="60" font-size="10" text-anchor="middle" fill="#fff">
+         🎉
+        </text>
+       </svg>
+       <p class="font-bold text-xl">Forever Friendship</p>
+      </div>
+     </div>
+    </section><!-- Gift Modal -->
+    <div id="gift-modal" class="hidden fixed inset-0 flex items-center justify-center z-50 px-4">
+     <div class="absolute inset-0 rose-bg" onclick="closeGift()"></div>
+     <div id="gift-modal-content" class="relative rounded-3xl p-10 max-w-2xl w-full text-center shadow-2xl transform transition-all">
+      <div id="gift-emoji" class="text-7xl mb-6">
+       💖
+      </div>
+      <h3 id="gift-heading" class="text-4xl font-bold mb-6">Endless Love</h3>
+      <p id="gift-message" class="text-xl mb-8 leading-relaxed"></p><button id="close-gift-btn" onclick="closeGift()" class="px-8 py-3 text-xl font-semibold rounded-full transition-all duration-300 hover:scale-105"> Close 💝 </button>
+     </div>
+    </div><!-- Final Message -->
+    <section class="text-center mb-16 fade-in-up">
+     <div class="max-w-4xl mx-auto rounded-3xl p-12 shadow-2xl">
+      <div class="text-7xl mb-6 heartbeat-animation">
+       💖
+      </div>
+      <h2 class="text-4xl font-bold mb-6">From Komal to Archu</h2>
+      <p id="final-message" class="text-2xl leading-relaxed mb-8">You're not just my best friend, you're my sister from another mother! Thank you for being YOU - amazing, kind, funny, and absolutely wonderful! Here's to many more years of friendship, laughter, and unforgettable memories together! I love you so much, Archu! Have the most spectacular birthday ever! 🎉</p>
+      <div class="text-6xl">
+       🎂🎈🎁💝🌟✨🎊🎉
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#fff0f6",
+      surface_color: "#ffffff",
+      text_color: "#1f2937",
+      primary_color: "#ff1493",
+      secondary_color: "#9333ea",
+      main_title: "Happy Birthday Archu! 🎉",
+      subtitle: "From Your Best Friend, Komal 💕",
+      opening_message: "Today is YOUR special day! Get ready for surprises, fun games, and lots of love! 🌟",
+      memory_title: "Our Beautiful Journey 📸✨",
+      quote_1: "A friend like you is a rare gem that makes life beautiful every single day.",
+      quote_2: "May this year bring you endless joy, success, and all the happiness you deserve!",
+      quote_3: "You light up every room you enter. Never stop shining bright, Archu!",
+      game_title: "Let's Play Games! 🎮🎲",
+      gift_title: "Special Gifts For You 🎁💝",
+      final_message: "You're not just my best friend, you're my sister from another mother! Thank you for being YOU - amazing, kind, funny, and absolutely wonderful! Here's to many more years of friendship, laughter, and unforgettable memories together! I love you so much, Archu! Have the most spectacular birthday ever! 🎉✨💕",
+      font_family: "ui-sans-serif, system-ui, sans-serif",
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    // Gift messages for each lifafa
+    const giftMessages = [
+      { emoji: "💖", title: "Endless Love", message: "Archu, you have a heart of gold! May you always be surrounded by love, laughter, and people who cherish you as much as I do. You deserve all the love in the world! 💕" },
+      { emoji: "😊", title: "Infinite Joy", message: "Your smile lights up any room! May this year bring you countless moments of pure joy, endless laughter, and happiness that never fades. Keep smiling, beautiful! 🌈" },
+      { emoji: "⭐", title: "Bright Future", message: "The best is yet to come, Archu! May this new year of your life bring amazing opportunities, exciting adventures, and dreams coming true. You're destined for greatness! ✨" },
+      { emoji: "🌟", title: "All Dreams", message: "Dream big, my friend! May every wish you make and every goal you set come true this year. The universe is ready to make all your dreams a reality! 🌠" },
+      { emoji: "💝", title: "Best Wishes", message: "Wishing you a year filled with beautiful surprises, wonderful memories, and magical moments. You deserve nothing but the absolute best in life! 🎁" },
+      { emoji: "🎊", title: "Peace & Health", message: "May you always be blessed with good health, inner peace, and positive vibes. Take care of yourself, stay happy, and keep spreading your beautiful energy! 🧘‍♀️💚" },
+      { emoji: "✨", title: "Success Always", message: "You're unstoppable, Archu! May success follow you in everything you do - your career, your relationships, and all your endeavors. The world is yours! 🏆" },
+      { emoji: "🎉", title: "Forever Friendship", message: "Our friendship is a treasure I'll cherish forever! Thank you for being my partner in crime, my confidante, and my sister. Here's to many more years of amazing memories together! Komal & Archu forever! 👭💕" }
+    ];
+
+    // Open gift modal
+    function openGift(index) {
+  const gift = giftMessages[index];
+  document.getElementById('gift-emoji').textContent = gift.emoji;
+  document.getElementById('gift-heading').textContent = gift.title;
+  document.getElementById('gift-message').textContent = gift.message;
+  document.getElementById('gift-modal').classList.remove('hidden');
+
+  createRosePetals(); // 🌹 ADD THIS LINE
+}
+
+
+    // Close gift modal
+    function closeGift() {
+      document.getElementById('gift-modal').classList.add('hidden');
+    }
+
+    // Create confetti
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#ff1493', '#9333ea', '#fbbf24', '#10b981', '#ec4899'];
+      
+      for (let i = 0; i < 60; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 3 + 's';
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        container.appendChild(confetti);
+      }
+    }
+
+    // Balloon Pop Game
+    let balloonScore = 0;
+    function initBalloonGame() {
+      const gameContainer = document.getElementById('balloon-game');
+      gameContainer.innerHTML = '';
+      balloonScore = 0;
+      document.getElementById('balloon-score').textContent = balloonScore;
+      
+      const balloons = ['🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈', '🎈'];
+      const colors = ['#ff1493', '#9333ea', '#fbbf24', '#10b981', '#ec4899', '#6366f1'];
+      
+      balloons.forEach((balloon, index) => {
+        const div = document.createElement('div');
+        div.className = 'text-5xl cursor-pointer transition-transform hover:scale-125';
+        div.textContent = balloon;
+        div.style.color = colors[Math.floor(Math.random() * colors.length)];
+        div.addEventListener('click', function() {
+          this.textContent = '💥';
+          balloonScore++;
+          document.getElementById('balloon-score').textContent = balloonScore;
+          setTimeout(() => {
+            this.style.opacity = '0';
+          }, 200);
+        });
+        gameContainer.appendChild(div);
+      });
+    }
+
+    document.getElementById('reset-balloon').addEventListener('click', function(e) {
+      e.preventDefault();
+      initBalloonGame();
+    });
+
+    // Spin the Wheel
+    document.getElementById('spin-wheel').addEventListener('click', function(e) {
+      e.preventDefault();
+      const wheel = document.getElementById('wheel');
+      const result = document.getElementById('wheel-result');
+      const messages = [
+        "You're Amazing! 🌟",
+        "Best Friend Ever! 💖",
+        "You're a Star! ⭐",
+        "Simply Perfect! ✨",
+        "You're Awesome! 🎉",
+        "So Special! 💝"
+      ];
+      
+      wheel.style.transform = `rotate(${Math.random() * 360 + 720}deg)`;
+      wheel.style.transition = 'transform 2s ease-out';
+      
+      setTimeout(() => {
+        result.textContent = messages[Math.floor(Math.random() * messages.length)];
+        wheel.style.transition = 'transform 0.3s ease';
+        wheel.style.transform = 'rotate(0deg)';
+      }, 2000);
+    });
+
+    // Memory Match Game
+    let memoryCards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    
+    function initMemoryGame() {
+      const emojis = ['🎂', '🎁', '🎈', '🎉', '💖', '🌟', '✨', '🎊'];
+      const cards = [...emojis, ...emojis].sort(() => Math.random() - 0.5);
+      const gameContainer = document.getElementById('memory-game');
+      gameContainer.innerHTML = '';
+      matchedPairs = 0;
+      document.getElementById('memory-score').textContent = matchedPairs;
+      flippedCards = [];
+      
+      cards.forEach((emoji, index) => {
+        const card = document.createElement('div');
+        card.className = 'aspect-square rounded-lg flex items-center justify-center text-4xl cursor-pointer transition-all';
+        card.style.backgroundColor = config.primary_color || defaultConfig.primary_color;
+        card.dataset.emoji = emoji;
+        card.dataset.index = index;
+        card.textContent = '?';
+        
+        card.addEventListener('click', function() {
+          if (flippedCards.length < 2 && !this.classList.contains('matched') && !flippedCards.includes(this)) {
+            this.textContent = this.dataset.emoji;
+            this.style.backgroundColor = config.secondary_color || defaultConfig.secondary_color;
+            flippedCards.push(this);
+            
+            if (flippedCards.length === 2) {
+              setTimeout(() => {
+                if (flippedCards[0].dataset.emoji === flippedCards[1].dataset.emoji) {
+                  flippedCards.forEach(card => card.classList.add('matched'));
+                  matchedPairs++;
+                  document.getElementById('memory-score').textContent = matchedPairs;
+                  flippedCards = [];
+                } else {
+                  flippedCards.forEach(card => {
+                    card.textContent = '?';
+                    card.style.backgroundColor = config.primary_color || defaultConfig.primary_color;
+                  });
+                  flippedCards = [];
+                }
+              }, 800);
+            }
+          }
+        });
+        
+        gameContainer.appendChild(card);
+      });
+    }
+
+    document.getElementById('reset-memory').addEventListener('click', function(e) {
+      e.preventDefault();
+      initMemoryGame();
+    });
+
+    // Quiz Game
+    const quizOptions = document.querySelectorAll('.quiz-option');
+    quizOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        const result = document.getElementById('quiz-result');
+        if (this.dataset.answer === 'correct') {
+          result.textContent = '🎉 Correct! You rock!';
+          result.style.color = '#10b981';
+        } else {
+          result.textContent = '😄 Try again!';
+          result.style.color = '#ef4444';
+        }
+      });
+    });
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'ui-sans-serif, system-ui, sans-serif';
+      const fontSize = config.font_size || defaultConfig.font_size;
+
+      // Apply background color
+      const app = document.getElementById('app');
+      app.style.backgroundColor = config.background_color || defaultConfig.background_color;
+
+      // Apply colors to all text elements
+      const mainTitle = document.getElementById('main-title');
+      const subtitle = document.getElementById('subtitle');
+      const openingMessage = document.getElementById('opening-message');
+      const memoryTitle = document.getElementById('memory-title');
+      const quote1 = document.getElementById('quote-1');
+      const quote2 = document.getElementById('quote-2');
+      const quote3 = document.getElementById('quote-3');
+      const gameTitle = document.getElementById('game-title');
+      const giftTitle = document.getElementById('gift-title');
+      const finalMessage = document.getElementById('final-message');
+
+      mainTitle.textContent = config.main_title || defaultConfig.main_title;
+      mainTitle.style.color = config.text_color || defaultConfig.text_color;
+      mainTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      mainTitle.style.fontSize = `${fontSize * 4.5}px`;
+
+      subtitle.textContent = config.subtitle || defaultConfig.subtitle;
+      subtitle.style.color = config.text_color || defaultConfig.text_color;
+      subtitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      subtitle.style.fontSize = `${fontSize * 1.875}px`;
+
+      const openingBox = openingMessage.parentElement;
+      openingBox.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      openingMessage.textContent = config.opening_message || defaultConfig.opening_message;
+      openingMessage.style.color = config.text_color || defaultConfig.text_color;
+      openingMessage.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      openingMessage.style.fontSize = `${fontSize * 1.5}px`;
+
+      memoryTitle.textContent = config.memory_title || defaultConfig.memory_title;
+      memoryTitle.style.color = config.text_color || defaultConfig.text_color;
+      memoryTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      memoryTitle.style.fontSize = `${fontSize * 3.125}px`;
+
+      quote1.textContent = config.quote_1 || defaultConfig.quote_1;
+      quote1.style.color = config.text_color || defaultConfig.text_color;
+      quote1.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      quote1.style.fontSize = `${fontSize * 1.25}px`;
+
+      quote2.textContent = config.quote_2 || defaultConfig.quote_2;
+      quote2.style.color = config.text_color || defaultConfig.text_color;
+      quote2.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      quote2.style.fontSize = `${fontSize * 1.25}px`;
+
+      quote3.textContent = config.quote_3 || defaultConfig.quote_3;
+      quote3.style.color = config.text_color || defaultConfig.text_color;
+      quote3.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      quote3.style.fontSize = `${fontSize * 1.25}px`;
+
+      // Apply surface color to quote cards
+      document.querySelectorAll('.quote-card').forEach(card => {
+        card.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      });
+
+      gameTitle.textContent = config.game_title || defaultConfig.game_title;
+      gameTitle.style.color = config.text_color || defaultConfig.text_color;
+      gameTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      gameTitle.style.fontSize = `${fontSize * 3.125}px`;
+
+      giftTitle.textContent = config.gift_title || defaultConfig.gift_title;
+      giftTitle.style.color = config.text_color || defaultConfig.text_color;
+      giftTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      giftTitle.style.fontSize = `${fontSize * 3.125}px`;
+
+      finalMessage.textContent = config.final_message || defaultConfig.final_message;
+      finalMessage.style.color = config.text_color || defaultConfig.text_color;
+      finalMessage.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      finalMessage.style.fontSize = `${fontSize * 1.5}px`;
+
+      // Apply colors to game cards
+      document.querySelectorAll('.game-card').forEach(card => {
+        card.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      });
+
+      // Apply colors to gift cards
+      document.querySelectorAll('.gift-card').forEach(card => {
+        card.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      });
+
+      // Apply colors to photo frames
+      document.querySelectorAll('.photo-frame').forEach(frame => {
+        frame.style.borderColor = config.primary_color || defaultConfig.primary_color;
+      });
+
+      // Apply button colors
+      const resetBalloon = document.getElementById('reset-balloon');
+      const spinWheel = document.getElementById('spin-wheel');
+      const resetMemory = document.getElementById('reset-memory');
+
+      [resetBalloon, spinWheel, resetMemory].forEach(btn => {
+        btn.style.backgroundColor = config.primary_color || defaultConfig.primary_color;
+        btn.style.color = config.surface_color || defaultConfig.surface_color;
+        btn.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      });
+
+      // Apply quiz button colors
+      document.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.style.backgroundColor = config.secondary_color || defaultConfig.secondary_color;
+        btn.style.color = config.surface_color || defaultConfig.surface_color;
+        btn.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      });
+
+      // Apply colors to final message box
+      const finalBox = finalMessage.parentElement;
+      finalBox.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+
+      // Apply colors to gift modal
+      const giftModalContent = document.getElementById('gift-modal-content');
+      giftModalContent.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      document.getElementById('gift-heading').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('gift-heading').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.getElementById('gift-message').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('gift-message').style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      const closeBtn = document.getElementById('close-gift-btn');
+      closeBtn.style.backgroundColor = config.secondary_color || defaultConfig.secondary_color;
+      closeBtn.style.color = config.surface_color || defaultConfig.surface_color;
+      closeBtn.style.fontFamily = `${customFont}, ${baseFontStack}`;
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                config.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_color || defaultConfig.secondary_color,
+              set: (value) => {
+                config.secondary_color = value;
+                window.elementSdk.setConfig({ secondary_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['main_title', config.main_title || defaultConfig.main_title],
+          ['subtitle', config.subtitle || defaultConfig.subtitle],
+          ['opening_message', config.opening_message || defaultConfig.opening_message],
+          ['memory_title', config.memory_title || defaultConfig.memory_title],
+          ['quote_1', config.quote_1 || defaultConfig.quote_1],
+          ['quote_2', config.quote_2 || defaultConfig.quote_2],
+          ['quote_3', config.quote_3 || defaultConfig.quote_3],
+          ['game_title', config.game_title || defaultConfig.game_title],
+          ['gift_title', config.gift_title || defaultConfig.gift_title],
+          ['final_message', config.final_message || defaultConfig.final_message]
+        ])
+      });
+
+      config = window.elementSdk.config;
+      onConfigChange(config);
+    }
+
+    // Initialize everything
+    createConfetti();
+    initBalloonGame();
+    initMemoryGame();
+  function createRosePetals() {
+  const container = document.getElementById('rose-petals');
+  container.innerHTML = '';
+
+  for (let i = 0; i < 25; i++) {
+    const petal = document.createElement('div');
+    petal.className = 'rose-petal';
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.animationDelay = Math.random() * 5 + 's';
+    petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
+    container.appendChild(petal);
+  }
+}
+
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9af7b3d6c7773b7f',t:'MTc2NTk4Nzk1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
